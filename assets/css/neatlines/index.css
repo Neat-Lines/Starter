@@ -3,9 +3,15 @@
     --light-bg-color: #f4f4f4;
     --dark-font-color: #464646;
     --light-font-color: #fff;
+    --blue: #0786cd;
+    --light-blue: #49c7ee;
+    --orange: #ed5e27;
+    --dark-orange: #d66918;
 }
 
-/* Header Styles */
+/**************/
+/* Nav Styles */
+/**************/
 .gh-head {
     background-color: var(--dark-bg-color);
     color: var(--light-font-color);
@@ -44,11 +50,80 @@
     line-height: 1.2em;
 }
 
+/*******************/
+/* Homepage Styles */
+/*******************/
+
+/* Homepage Header */
+.home-header {
+    color: var(--light-font-color);
+    background-color: var(--dark-bg-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10%;
+    text-align: center;
+}
+
+.home-title {
+    font-size: 4em;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px var(--dark-bg-color);
+}
+
+.home-excerpt {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px var(--dark-bg-color);
+    padding: 2em 0;
+}
+
+.home-btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    font-size: 2rem;
+    font-weight: 700;
+    border: 0;
+    border-radius: 15px;
+    background-color: var(--dark-bg-color);
+    padding: .6em;
+    color: var(--light-font-color);
+}
+
+.btn-blue {
+    background-color: var(--blue);
+}
+
+.btn-orange {
+    background-color: var(--orange);
+}
+
+/******************/
 /* Content Styles */
+/******************/
+
+/* Main Page Style */
 .gh-main {
     background-color: var(--light-bg-color);
     color: var(--dark-font-color);
 }
+
+/* Section Style */
+.home-content {
+    text-align: center;
+    padding-bottom: 5em;
+    margin: 0 5em;
+}
+
+.home-content h2 {
+    padding: 2em 0;
+}
+
+/*****************/
+/* Media Queries */
+/*****************/
 
 @media (max-width: 900px) {
     .gh-head-icon {
