@@ -46,7 +46,7 @@ function css(done) {
     pump([
         src('assets/css/*.css', {sourcemaps: true}),
         postcss(processors),
-        dest('assets/built/', {sourcemaps: '.'}),
+        dest('assets/built/css', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
 }
@@ -55,7 +55,7 @@ function js(done) {
     pump([
         src('assets/js/*.js', {sourcemaps: true}),
         uglify(),
-        dest('assets/built/', {sourcemaps: '.'}),
+        dest('assets/built/js', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
 }
