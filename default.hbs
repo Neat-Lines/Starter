@@ -2,12 +2,20 @@
 <html lang="{{@site.lang}}">
 <head>
 
+    {{! Site META }}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "built/css/screen.css"}}" />
 
+    {{! Site Description }}
     <title>{{meta_title}}</title>
+
+    {{! Font Awesome }}
+    <script src="https://kit.fontawesome.com/a667827803.js" crossorigin="anonymous"></script>
+
+    {{! Site CSS Assets }}
+    <link href="{{asset "css/neatlines/index.css"}}" rel="stylesheet" type="text/css">
 
     {{ghost_head}}
     {{!-- Outputs important meta data and settings, should always be in <head> --}}
@@ -16,39 +24,8 @@
 <body class="{{body_class}}">
 <div class="gh-viewport">
 
-<header id="gh-head" class="gh-head">
-    <nav class="gh-head-inner gh-container">
-
-        <div class="gh-head-brand">
-            <a class="gh-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
-            <a class="gh-burger" role="button">
-                <div class="gh-burger-box">
-                    <div class="gh-burger-inner"></div>
-                </div>
-            </a>
-        </div>
-        <div class="gh-head-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                {{/if}}
-                {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            </div>
-        </div>
-    </nav>
-</header>
+{{! Navbar Partial - partials/navbar.hbs}}
+{{> navbar }}
 
 <main class="gh-main">
 
@@ -66,19 +43,30 @@
             Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
         </div>
     </div>
+    <div class="gh-head-actions">
+        <div class="gh-head-actions-list">
+            {{#if @site.facebook}}
+            <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+            {{/if}}
+            {{#if @site.twitter}}
+            <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+            {{/if}}
+            <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+        </div>
+    </div>
 </footer>
 
 </div>
 
 {{!-- <foot> --}}
 
-<script src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
+<script src="{{asset "built/js/jquery-3.4.1.min.js"}}"></script>
 
 {{#if pagination.pages}}
 <script>
     var maxPages = parseInt('{{pagination.pages}}');
 </script>
-<script src="{{asset "built/infinitescroll.js"}}"></script>
+<script src="{{asset "built/js/infinitescroll.js"}}"></script>
 {{/if}}
 
 <script>
@@ -91,7 +79,7 @@ $(document).ready(function () {
 </script>
 
 {{#is "post, page"}}
-<script src="{{asset "built/jquery.fitvids.js"}}"></script>
+<script src="{{asset "built/js/jquery.fitvids.js"}}"></script>
 <script>
 var images = document.querySelectorAll('.kg-gallery-image img');
 images.forEach(function (image) {
