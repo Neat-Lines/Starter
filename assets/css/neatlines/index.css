@@ -114,11 +114,73 @@
 .home-content {
     text-align: center;
     padding-bottom: 5em;
-    margin: 0 5em;
 }
 
 .home-content h2 {
-    padding: 2em 0;
+    padding: 1.5em 0;
+}
+
+/* Home Img Gallery */
+.home-img-gallery {
+    display: flex;
+}
+
+.home-img-gallery div {
+    position: relative;
+}
+
+.home-img-gallery img {
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.img-text {
+    position: absolute;
+    color: var(--light-font-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: .125rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Home Testimonials */
+.home-content blockquote {
+    margin-top: 0;
+}
+
+.quote-attr {
+    font-style: italic;
+    margin-top: 0;
+    text-align: right;
+}
+/*****************/
+/* Footer Styles */
+/*****************/
+
+footer {
+    background-color: var(--dark-bg-color);
+    color: var(--light-font-color);
+}
+
+.nl-foot, .foot-info {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.nl-foot {
+    justify-content: space-evenly;
+}
+
+.foot-icon img {
+    max-height: 50px;
+    display: initial;
+}
+
+.foot-info {
+    flex-direction: column;
 }
 
 /*****************/
@@ -145,5 +207,19 @@
     /* Padding in mobile menu */
     .gh-head-menu  .nav li {
         padding: .125em;
+    }
+
+    .home-content {
+        padding: 0 1em 5em;
+    }
+
+    /* Home Image Gallery */
+    .home-img-gallery {
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .nl-foot {
+        flex-direction: column;
     }
 }
