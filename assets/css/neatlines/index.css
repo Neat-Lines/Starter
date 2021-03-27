@@ -195,8 +195,31 @@ footer {
     font-size: 1.5em;
 }
 
+.foot-sub form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.foot-sub input {
+    border-radius: 7px;
+    border: none;
+    padding: .2em;
+}
+
+.sub-email {
+    margin: 1em 0 .5em;
+}
+
+.sub-submit {
+    border-radius: 7px;
+    font-size: 1em;
+}
+
 .foot-info {
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .foot-head {
@@ -210,6 +233,7 @@ footer {
 
 .gh-foot-menu .nav {
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .gh-foot-menu .nav li {
@@ -260,6 +284,11 @@ footer {
         flex-direction: column;
     }
 
+    .foot-info {
+        align-items: center;
+        text-align: center;
+    }
+
     .gh-foot-menu {
         border-top: 1px solid var(--light-font-color);
         border-left: none;
@@ -269,5 +298,6 @@ footer {
 
     .gh-foot-menu .nav {
         flex-direction: row;
+        align-items: center;
     }
 }
