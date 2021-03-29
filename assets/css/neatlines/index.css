@@ -7,6 +7,16 @@
     --light-blue: #49c7ee;
     --orange: #ed5e27;
     --dark-orange: #d66918;
+    --font-family-header: din-condensed, sans-serif;
+    --font-family-content: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-family-header);
+}
+
+p {
+    font-family: var(--font-family-content);
 }
 
 /**************/
@@ -18,6 +28,7 @@
 	position: sticky;
 	top: 0;
     z-index: 1;
+    padding: 1vmin 4vmin;
 }
 
 .gh-head-inner {
@@ -67,16 +78,17 @@
     background-color: var(--dark-bg-color);
     padding: 10%;
     text-align: center;
+    padding: 10% 20%;
 }
 
 .home-title {
-    font-size: 4em;
+    font-size: 6em;
     font-weight: 400;
     text-shadow: 2px 2px 4px var(--dark-bg-color);
 }
 
 .home-excerpt {
-    font-size: 1.5em;
+    font-size: 2em;
     text-shadow: 2px 2px 4px var(--dark-bg-color);
     padding: 2em 0;
 }
@@ -84,6 +96,7 @@
 .home-btn {
     display: flex;
     justify-content: space-evenly;
+    padding: 3em 0 0;
 }
 
 .btn {
@@ -168,6 +181,10 @@ footer {
     color: var(--light-font-color);
 }
 
+.gh-foot {
+    padding: 4vmin;
+}
+
 .gh-foot .gh-container {
     width: 100%;
 }
@@ -248,6 +265,12 @@ footer {
 /* Media Queries */
 /*****************/
 
+@media (max-width: 1280px) {
+    .home-header {
+        padding: 10%;
+    }
+}
+
 @media (max-width: 900px) {
     .gh-head-icon {
         display: block;
@@ -265,9 +288,26 @@ footer {
         display: none;
     }
 
+    .gh-canvas p, .gh-canvas blockquote {
+        text-align: left;
+        font-family: var(--font-family-content);
+    }
+
     /* Padding in mobile menu */
     .gh-head-menu  .nav li {
         padding: .125em;
+    }
+
+    .home-title {
+        font-size: 4em;
+    }
+
+    .home-excerpt {
+        font-size: 1.5em;
+    }
+
+    .home-btn {
+        padding: 0;
     }
 
     .home-content {
