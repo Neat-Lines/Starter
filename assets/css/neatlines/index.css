@@ -37,6 +37,8 @@ p {
 	top: 0;
     z-index: 1;
     padding: 1vmin 4vmin;
+    box-shadow: 0 0 8px black;
+    border-bottom: 1px solid #212121;
 }
 
 .gh-head-inner {
@@ -211,6 +213,7 @@ footer {
 
 .gh-foot {
     padding: 4vmin;
+    border-top: solid 8px var(--light-blue);
 }
 
 .gh-foot .gh-container {
