@@ -251,8 +251,13 @@ footer {
 
 .foot-sub input {
     border-radius: 7px;
-    border: none;
+    border: solid 2px var(--dark-bg-color);
     padding: .2em;
+}
+
+.foot-sub input:focus {
+    outline: none;
+    border: solid 2px var(--light-blue)
 }
 
 .sub-email {
