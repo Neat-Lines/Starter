@@ -213,7 +213,8 @@ footer {
 
 .gh-foot {
     padding: 4vmin;
-    border-top: solid 8px var(--light-blue);
+    box-shadow: 0 0 8px black;
+    border-top: 1px solid #212121;
 }
 
 .gh-foot .gh-container {
