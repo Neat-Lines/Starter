@@ -3,31 +3,9 @@
         <div class="foot-sec foot-icon">
             {{#if @site.icon}}
                 <img src="{{@site.icon}}" alt="{{@site.title}}" />
-                <p class="foot-head icon-head">Neat Lines, LLC</p>
             {{else}}
                 {{@site.title}}
             {{/if}}
-        </div>
-        <div class="foot-sec foot-info">
-            <div>
-                <p class="foot-head">Address</p>
-                <p>Denver, CO</p>
-            </div>
-            <div>
-                <p class="foot-head">Phone</p>
-                <p>555-555-5555</p>
-            </div>
-            <div>
-                <p class="foot-head">Email</p>
-                <p>Marketing@neatlinesco.com</p>
-            </div>
-        </div>
-        <div class="foot-sec foot-sub">
-            <form>
-                <label for="email">Subscribe to our emails!</label>
-                <input class="sub-email" type="email" id="email" name="email" placeholder="Email">
-                <input class="btn btn-blue sub-submit" type="submit" value="Subscribe">
-            </form>
         </div>
         <div class="foot-sec gh-foot-menu">
             {{navigation type="secondary"}}
