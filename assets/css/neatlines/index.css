@@ -19,6 +19,10 @@ p {
     font-family: var(--font-family-content);
 }
 
+nav, .nav {
+    font-family: var(--font-family-header);
+}
+
 .gh-canvas>blockquote,
 .gh-canvas>dl,
 .gh-canvas>ol,
@@ -55,7 +59,7 @@ p {
 
 .gh-head-menu  .nav li {
     padding: 0 0 0 1em;
-    font-size: 1.5em;
+    font-size: 1.65em;
 }
 
 .nav-current a {
@@ -246,6 +250,7 @@ footer {
 
 .nl-foot, .foot-info {
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 }
@@ -304,12 +309,11 @@ footer {
 }
 
 .gh-foot-menu {
-    border-left: 1px solid var(--light-font-color);
     flex-direction: column;
+    border-top: 1px solid var(--light-font-color);
 }
 
 .gh-foot-menu .nav {
-    flex-direction: column;
     align-items: flex-start;
 }
 
@@ -384,8 +388,6 @@ footer {
     }
 
     .gh-foot-menu {
-        border-top: 1px solid var(--light-font-color);
-        border-left: none;
         flex-direction: row;
         flex-wrap: wrap;
     }
