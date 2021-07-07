@@ -14,7 +14,22 @@
         </div>
 
         <div class="sidebar">
-            <h2>This is the Side Area</h2>
+            <h2 class="sidebar-title">Categories</h2>
+            <div class="sidebar-categories">
+            {{#get "tags"}}
+                {{#foreach tags}}
+
+                    <a class="sidebar-category" href="{{url}}">{{name}}</a>
+                
+                {{/foreach}}
+            {{/get}}
+            </div>
+            <h2 class="sidebar-title">Popular Posts</h2>
+            {{#foreach posts featured=true}}
+                
+                {{> "popCard"}}
+
+            {{/foreach}}
         </div>
 
     </div>
