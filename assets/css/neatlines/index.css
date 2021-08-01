@@ -212,6 +212,37 @@ a:hover {
     text-align: right;
 }
 
+#contact-form {
+    background: #dfdfdf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+    padding: 2em;
+}
+
+#contact-form > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding-bottom: 2em;
+}
+
+.contact-input {
+    width: 100%;
+    padding: .25em;
+}
+
+.btn-contact {
+    background-color: var(--blue);
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+}
+
 /*********************/
 /* Blog Index Styles */
 /*********************/
