@@ -1,10 +1,10 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A custom theme for ghost",
+    "name": "neat-lines-theme",
+    "description": "Theme for Neat Lines Ghost sites",
     "demo": "https://starter.ghost.io",
     "version": "1.0.0",
     "engines": {
-        "ghost": ">=3.0.0",
+        "ghost": ">=4.4.0",
         "ghost-api": "v3"
     },
     "license": "MIT",
@@ -51,6 +51,7 @@
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "8.0.0",
         "gulp-sourcemaps": "2.6.5",
+        "gulp-terser": "^2.0.1",
         "gulp-uglify": "3.0.2",
         "gulp-util": "3.0.8",
         "gulp-watch": "5.0.1",
@@ -83,5 +84,6 @@
                 "width": 2000
             }
         }
-    }
+    },
+    "dependencies": {}
 }
